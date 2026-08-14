@@ -246,7 +246,7 @@ Because a fixed random seed is used, the generated dataset is reproducible.
 
 ## Live Demo
 
-A hosted Streamlit demo will be added here.
+[Open the interactive dashboard](https://ecommerce-operations-dashboard.streamlit.app)
 
 ---
 
