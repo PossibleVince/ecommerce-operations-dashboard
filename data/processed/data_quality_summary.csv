@@ -1,0 +1,6 @@
+check,issue_count,status
+Duplicate order IDs,5,Review
+Missing marketplace,6,Review
+Missing shipping cost,5,Review
+Negative inventory quantity,0,OK
+Returns without matching order,0,OK

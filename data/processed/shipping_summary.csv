@@ -1,0 +1,4 @@
+carrier,shipments,avg_shipping_cost,total_shipping_cost,avg_package_weight
+FedEx,1384,14.16,19603.41,13.5
+UPS,1513,14.07,21289.19,13.18
+USPS,1088,14.91,16224.82,13.22

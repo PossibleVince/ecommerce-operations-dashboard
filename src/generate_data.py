@@ -161,11 +161,28 @@ def generate_orders(n_orders=4200):
 
     df = pd.DataFrame(rows)
 
-    # Create a few stale Processing orders
-    stale_idx = df[
-        (df["order_status"] == "Processing")
-        & (pd.to_datetime(df["order_date"]) < TODAY - timedelta(days=10))
-    ].sample(n=min(25, len(df)), random_state=SEED).index
+    # Keep old orders realistic: most Processing orders should not
+    # remain open for weeks or months.
+    order_dates = pd.to_datetime(df["order_date"])
+
+    old_processing = (
+        df["order_status"].eq("Processing")
+        & (order_dates < TODAY - timedelta(days=10))
+    )
+
+    df.loc[old_processing, "order_status"] = "Delivered"
+
+    # Intentionally leave a small number of old orders in Processing
+    # so the dashboard has realistic stale-order exceptions.
+    stale_candidates = df[
+        (~df["order_status"].eq("Cancelled"))
+        & (order_dates < TODAY - timedelta(days=10))
+    ]
+
+    stale_idx = stale_candidates.sample(
+        n=min(25, len(stale_candidates)),
+        random_state=SEED
+    ).index
 
     df.loc[stale_idx, "order_status"] = "Processing"
 

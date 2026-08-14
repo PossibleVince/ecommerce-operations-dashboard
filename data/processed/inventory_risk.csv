@@ -1,0 +1,9 @@
+sku,product_name,category,unit_cost,on_hand_qty,reserved_qty,available_qty,reorder_point,warehouse,inventory_value,units_sold_8w,avg_weekly_sales,weeks_of_supply,stock_status
+SKU-1004,Kitchen Organizer Set,Home,18.0,18,0,18,120,"Richmond, CA",324.0,332,41.5,0.4,Low Stock
+SKU-1007,Drawer Storage Cabinet,Storage,31.0,12,2,10,70,"Richmond, CA",372.0,205,25.625,0.4,Low Stock
+SKU-1001,Compact Storage Rack,Home,42.0,190,2,188,80,"Richmond, CA",7980.0,337,42.125,4.5,Normal
+SKU-1006,Portable Work Bench,Tools,57.0,95,3,92,40,"Richmond, CA",5415.0,162,20.25,4.5,Normal
+SKU-1008,Foldable Utility Shelf,Home,38.0,145,23,122,60,"Reno, NV",5510.0,228,28.5,4.3,Normal
+SKU-1002,Ergonomic Office Chair,Furniture,78.0,110,2,108,50,"Reno, NV",8580.0,216,27.0,4.0,Normal
+SKU-1003,Adjustable Standing Desk,Furniture,115.0,620,17,603,35,"Reno, NV",71300.0,176,22.0,27.4,Overstock
+SKU-1005,Heavy Duty Utility Cart,Storage,64.0,480,0,480,45,"Reno, NV",30720.0,172,21.5,22.3,Overstock
